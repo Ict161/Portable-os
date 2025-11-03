@@ -1,0 +1,5 @@
+# Minimal firewall rules
+# This file can be loaded with sudo ufw reset && sudo ufw enable
+deny incoming
+allow outgoing
+allow ssh
