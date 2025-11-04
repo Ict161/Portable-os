@@ -1,0 +1,22 @@
+
+---
+
+## ⚙️ `setup/create_persistent_usb.sh`
+
+```bash
+#!/bin/bash
+# Create persistence for Linux Mint using Ventoy
+# Usage: sudo bash create_persistent_usb.sh /dev/sdX linuxmint.iso
+
+DEVICE="$1"
+ISO="$2"
+
+if [ -z "$DEVICE" ] || [ -z "$ISO" ]; then
+    echo "Usage: sudo bash $0 /dev/sdX linuxmint.iso"
+    exit 1
+fi
+
+echo "[*] Creating persistence partition on $DEVICE..."
+sudo ventoy -P -s /path/to/persistence.dat -d "$DEVICE"
+
+echo "[*] Persistence setup complete."
