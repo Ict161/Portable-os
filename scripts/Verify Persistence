@@ -1,0 +1,7 @@
+#!/bin/bash
+# Verify persistence works
+
+echo "[*] Testing persistence..."
+touch ~/persistence_test.txt
+sync
+echo "If this file is still here after reboot, persistence works!"
