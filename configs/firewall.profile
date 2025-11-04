@@ -1,4 +1,4 @@
-# Minimal Firejail profile
+# Minimal Firewall profile
 private-dev
 private-opt
 private-tmp
